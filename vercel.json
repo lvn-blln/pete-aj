@@ -8,7 +8,7 @@
    { "src": "/css(.*)", "dest": "/api/css/$1" }
    { "src": "/images(.*)", "dest": "/api/images/$1" }
    { "src": "/js(.*)", "dest": "/api/indejs/$1" }
-   { "src": "/resume(.*)", "dest": "/api/resume/$1" }
+   { "src": "/resume(.*)", "dest": "/api/resume/" }
   { "src": "/(.*)", "dest": "/api/index.php" }
  ]
 }
