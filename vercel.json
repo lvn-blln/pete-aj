@@ -12,10 +12,10 @@
 //   { "src": "/(.*)", "dest": "/api/index.php" }
 //  ]
 "rewrites": [
-   { "source": "/css(.*)", "destination": "/api/css/$1" }
-   { "source": "/images(.*)", "destination": "/api/images/$1" }
-   { "source": "/js(.*)", "destination": "/api/indejs/$1" }
-   { "source": "/resume(.*)", "destination": "/api/resume/" }
+   { "source": "/css(.*)", "destination": "/api/css/$1" },
+   { "source": "/images(.*)", "destination": "/api/images/$1" },
+   { "source": "/js(.*)", "destination": "/api/indejs/$1" },
+   { "source": "/resume(.*)", "destination": "/api/resume/" },
   { "source": "/(.*)", "destination": "/api/index.php" }
  ]
 }
