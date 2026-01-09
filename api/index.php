@@ -24,15 +24,15 @@
     <meta property="og:title" content=":INSPO">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Inspired by the things I see and the things I think I saw.">
-    <meta property="og:image" content="https://reelfruit.com/images/BllN.png">
+    <meta property="og:image" content="https://pete-aj.vercel.app/images/BllN.png">
 
-    <meta property="og:image:secure_url" content="https://reelfruit.com/images/BllN.png">
+    <meta property="og:image:secure_url" content="https://pete-aj.vercel.app/images/BllN.png">
     <meta property="og:image:width" content="4000">
     <meta property="og:image:height" content="5000">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content=":INSPO">
     <meta name="twitter:description" content="Inspired by the things I see and the things I think I saw.">
-    <meta name="twitter:image" content="https://reelfruit.com/images/BllN.png">
+    <meta name="twitter:image" content="https://pete-aj.vercel.app/images/BllN.png">
 
 </head>
 
@@ -152,7 +152,7 @@
                                                         <p class="subtitle-top">Welcome To<br>My Portfolio</p>
                                                         <h1 class="display-2 text-white"><span class="text-primary">Hello</span> I am<br> Peter.</h1>
                                                         <a href="resume/Peter-Jesulola-Resume" download="">
-                                                            <button type="button" class="btn btn-secondary ion-document" style="font-size:1.2rem; border-radius: 20px;"> Download Resume</button>
+                                                            <button type="button" class="btn btn-secondary ion-document" style="font-size:1.2rem; border-radius: 20px;"> Download Resum&#233;</button>
                                                         </a>
                                                         
                                                         
@@ -348,7 +348,7 @@
                                         </a>
                                     </div>
                                     <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-                                        <a href="https://reelfruit.com" class="project-box" target="_blank">
+                                        <a href="https://pete-aj.vercel.app" class="project-box" target="_blank">
                                             <div class="project-box-inner">
                                                 <h5>Reel Fruit</h5>
                                                 <div class="project-category">2023 / SNACK RETAIL</div>
