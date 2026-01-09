@@ -8,15 +8,15 @@
     <meta name="description" content="">
     <meta name="author" content=":INSPO">
 
-    <link rel="shortcut icon" href="/images/favicon.png">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     <title>Peter Jesulola</title>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i&amp;display=swap" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
     <meta name="description" content="Inspired by the things I see and the things I think I saw.">
     
     <meta property="og:site_name" content=":INSPO">
@@ -139,7 +139,7 @@
     <div class="pagepiling">
         <div data-anchor="page1" class="pp-scrollable text-white section section-1">
             <div class="scroll-wrap">
-                <div class="section-bg" style="background-image:url(images/bg/bg.jpg); background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg); background-size: cover;"></div>
+                <div class="section-bg" style="background-image:url(images/bg/bg.jpg); background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(images/bg/bg.jpg); background-size: cover;"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
                             <div class="boxed boxed-inner">
@@ -194,22 +194,22 @@
                                                          <h6 class="title-uppercase"><br>Skills</h6>
                                                         <div class="row row-partners">
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/laravel.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/laravel.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/php.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/php.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/react.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/react.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/html.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/html.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/css.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/css.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/mysql.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/mysql.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
                                                                 <div class="partner-inner"><img alt="" src="images/partners/js.png"></div>
@@ -219,16 +219,16 @@
                                                         <h6 class="title-uppercase"><br>Tools</h6>
                                                         <div class="row row-partners" >
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/git.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/git.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/github.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/github.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/ps.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/ps.png"></div>
                                                             </div>
                                                             <div class="col-partner-skill">
-                                                                <div class="partner-inner"><img alt="" src="/images/partners/ai.png"></div>
+                                                                <div class="partner-inner"><img alt="" src="images/partners/ai.png"></div>
                                                             </div>
                                                         </div>
 
@@ -244,7 +244,7 @@
                 </div>
                 <div data-anchor="page3" class="pp-scrollable text-white section section-3">
                     <div class="scroll-wrap">
-                        <div class="section-bg" style="background-image:url(/images/bg/resume.jpg);"></div>
+                        <div class="section-bg" style="background-image:url(images/bg/resume.jpg);"></div>
                         <div class="scrollable-content">
                             <div class="vertical-centred">
                                 <div class="boxed boxed-inner">
@@ -312,11 +312,11 @@
                     <div data-anchor="page4" class="pp-scrollable text-white section section-5">
                         <div class="scroll-wrap">
                             <div class="bg-changer">
-                                <div class="section-bg" style="background-image:url(/images/bg/project1.jpg);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/plug.png);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/reelfruit.png);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/motivar.png);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/powerplug.png);"></div>
+                                <div class="section-bg" style="background-image:url(images/bg/project1.jpg);"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(images/bg/plug.png);"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(images/bg/reelfruit.png);"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(images/bg/motivar.png);"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(images/bg/powerplug.png);"></div>
                         </div>
 
                         <div class="scrollable-content">
@@ -394,7 +394,7 @@
 
 <div data-anchor="page5" class="pp-scrollable text-white section section-6">
     <div class="scroll-wrap">
-        <div class="section-bg" style="background-image:url(/images/bg/reviews.jpg);"></div>
+        <div class="section-bg" style="background-image:url(images/bg/reviews.jpg);"></div>
         <div class="scrollable-content">
             <div class="vertical-centred">
                 <div class="boxed boxed-inner">
@@ -449,7 +449,7 @@
 </div>
 <div data-anchor="page5" class="pp-scrollable section section-7">
     <div class="scroll-wrap">
-        <div class="section-bg" style="background-image:url(/images/bg/contact.jpg);"></div>
+        <div class="section-bg" style="background-image:url(images/bg/contact.jpg);"></div>
         <div class="scrollable-content">
             <div class="vertical-centred">
                 <div class="boxed boxed-inner">
