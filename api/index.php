@@ -24,15 +24,15 @@
     <meta property="og:title" content=":INSPO">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Inspired by the things I see and the things I think I saw.">
-    <meta property="og:image" content="https://pete-aj.vercel.app/images/BllN.png">
+    <meta property="og:image" content="https://pete-aj.vercel.app/api/images/BllN.png">
 
-    <meta property="og:image:secure_url" content="https://pete-aj.vercel.app/images/BllN.png">
+    <meta property="og:image:secure_url" content="https://pete-aj.vercel.app/api/images/BllN.png">
     <meta property="og:image:width" content="4000">
     <meta property="og:image:height" content="5000">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content=":INSPO">
     <meta name="twitter:description" content="Inspired by the things I see and the things I think I saw.">
-    <meta name="twitter:image" content="https://pete-aj.vercel.app/images/BllN.png">
+    <meta name="twitter:image" content="https://pete-aj.vercel.app/api/images/BllN.png">
 
 </head>
 
