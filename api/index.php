@@ -139,7 +139,7 @@
     <div class="pagepiling">
         <div data-anchor="page1" class="pp-scrollable text-white section section-1">
             <div class="scroll-wrap">
-                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);"></div>
+                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
                             <div class="boxed boxed-inner">
@@ -151,7 +151,7 @@
                                                     <div class="col-md-8 col-lg-6">
                                                         <p class="subtitle-top">Welcome To<br>My Portfolio</p>
                                                         <h1 class="display-2 text-white"><span class="text-primary">Hello</span> I am<br> Peter.</h1>
-                                                        <a href="/resume/Peter-Jesulola-Resume" download="">
+                                                        <a href="/resume/Peter-Jesulola-Resume.pdf" download="">
                                                             <button type="button" class="btn btn-secondary ion-document" style="font-size:1.2rem; border-radius: 20px;"> Download Resum&#233;</button>
                                                         </a>
                                                         
