@@ -21,7 +21,7 @@
     
     <meta property="og:site_name" content=":INSPO">
     <meta property="og:url" content="">
-    <meta property="og:title" content=":INSPO">
+    <meta property="og:title" content="1.5.5.9.0">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Inspired by the things I see and the things I think I saw.">
     <meta property="og:image" content="https://pete-aj.vercel.app/images/BllN.png">
@@ -30,7 +30,7 @@
     <meta property="og:image:width" content="4000">
     <meta property="og:image:height" content="5000">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content=":INSPO">
+    <meta name="twitter:title" content="1.5.5.9.0">
     <meta name="twitter:description" content="Inspired by the things I see and the things I think I saw.">
     <meta name="twitter:image" content="https://pete-aj.vercel.app/images/BllN.png">
 
@@ -139,7 +139,7 @@
     <div class="pagepiling">
         <div data-anchor="page1" class="pp-scrollable text-white section section-1">
             <div class="scroll-wrap">
-                <div class="section-bg" style="background-image:url(images/bg/bg.jpg); background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg); background-size: cover;"></div>
+                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
                             <div class="boxed boxed-inner">
@@ -151,7 +151,7 @@
                                                     <div class="col-md-8 col-lg-6">
                                                         <p class="subtitle-top">Welcome To<br>My Portfolio</p>
                                                         <h1 class="display-2 text-white"><span class="text-primary">Hello</span> I am<br> Peter.</h1>
-                                                        <a href="resume/Peter-Jesulola-Resume" download="">
+                                                        <a href="/resume/Peter-Jesulola-Resume" download="">
                                                             <button type="button" class="btn btn-secondary ion-document" style="font-size:1.2rem; border-radius: 20px;"> Download Resum&#233;</button>
                                                         </a>
                                                         
@@ -330,7 +330,7 @@
                                             <div class="col-md-12">
                                                 <h2 class="title-uppercase text-white">LATEST PROJECTS</h2>
                                                 <div class="row-project-box row">
-                                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
+                                                    <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
                                                         <a href="https://dollsvalley.com" class="project-box" target="_blank">
                                                             
                                                         <div class="project-box-inner">
@@ -339,32 +339,32 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-                                                    <a href="https://plug.ng" class="project-box" target="_blank">
+                                                <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
+                                                    <a href="https://plug.ng" class="project-box" target="_blank" rel="noopener noreferrer">
                                                     <div class="project-box-inner">
                                                     <h5>Plug.Ng</h5>
                                                 <div class="project-category">2024 / UTILITIES</div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-                                        <a href="https://pete-aj.vercel.app" class="project-box" target="_blank">
+                                    <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
+                                        <a href="https://reelfruit.com" class="project-box" target="_blank" rel="noopener noreferrer">
                                             <div class="project-box-inner">
                                                 <h5>Reel Fruit</h5>
                                                 <div class="project-category">2023 / SNACK RETAIL</div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-                                        <a href="https://motivar.live" class="project-box" target="_blank">
+                                    <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
+                                        <a href="https://motivar.live" class="project-box" target="_blank" rel="noopener noreferrer">
                                             <div class="project-box-inner">
                                                 <h5>Motivar</h5>
                                                 <div class="project-category">2023 / ONLINE LEARNING</div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-                                        <a href="https://powerplug.ng" class="project-box">
+                                    <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
+                                        <a href="https://powerplug.ng" class="project-box" target="_blank" rel="noopener noreferrer">
                                             <div class="project-box-inner">
                                                 <h5>Hespat Technologies</h5>
                                                 <div class="project-category">2021 / RIDE-HAILING</div>
@@ -580,11 +580,11 @@
                                                     <textarea name="message" required="" placeholder="Message*"></textarea>
                                                 </div>
                                                 <div class="form-group form-group-message col-sm-12">
-                                                    <span id="success" class="text-primary">Thank You, your message is successfully sent!</span>
+                                                    <span id="success" class="text-primary">Thank You, your message was successfully sent!</span>
                                                     <span id="error" class="text-primary">Sorry, something went wrong </span>
                                                 </div>
                                                 <div class="col-sm-12">
-                                                    <button type="submit" class="btn">Let's Chat</button>
+                                                    <button type="submit" name="email" class="btn">Let's Chat</button>
                                                 </div>
                                             </div>
                                         </form>
