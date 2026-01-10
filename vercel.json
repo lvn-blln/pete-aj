@@ -8,5 +8,8 @@
    { "src": "/(.*)", "dest": "/api/index.php" },
    { "src": "/css/(.*)", "dest": "/css/$1" },
    { "src": "/images/(.*)", "dest": "/images/$1" },
+   { "src": "/fonts/(.*)", "dest": "/fonts/$1" },
+   { "src": "/js/(.*)", "dest": "/js/$1" },
+   { "src": "/resume/(.*)", "dest": "/resume/$1" }
  ]
 }
