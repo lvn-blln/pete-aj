@@ -130,11 +130,10 @@
     </header>
     <div class="copy-bottom white boxed">&copy; Peter Jesulola <?php echo date("Y"); ?> </div>
     <div class="social-list social-list-bottom boxed">
-        <a href="#" class="icon ion-social-twitter"></a>
-        <a href="#" class="icon ion-social-facebook"></a>
-        <a href="#" class="icon ion-social-googleplus"></a>
-        <a href="#" class="icon ion-social-linkedin"></a>
-        <a href="#" class="icon ion-social-dribbble-outline"></a>
+        <a href="https://linkedin.com/in/to-blow-a-balloon" class="icon ion-social-linkedin"></a>
+        <a href="tel:+2349039311108" class="icon ion-ios-telephone"></a>
+        <a href="mailto:blowaballoon@gmail.com" class="icon ion-email"></a>
+        <a href="https://github.com/lvn-blln" class="icon ion-social-github"></a>
     </div>
     <div class="pagepiling">
         <div data-anchor="page1" class="pp-scrollable text-white section section-1">
@@ -312,11 +311,11 @@
                     <div data-anchor="page4" class="pp-scrollable text-white section section-5">
                         <div class="scroll-wrap">
                             <div class="bg-changer">
-                                <div class="section-bg" style="background-image:url(/images/bg/project1.jpg);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/plug.png);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/reelfruit.png);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/motivar.png);"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/powerplug.png);"></div>
+                                <div class="section-bg" style="background-image:url(/images/bg/project1.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/plug.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/reelfruit.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/motivar.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/powerplug.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
                         </div>
 
                         <div class="scrollable-content">
@@ -331,7 +330,7 @@
                                                 <h2 class="title-uppercase text-white">LATEST PROJECTS</h2>
                                                 <div class="row-project-box row">
                                                     <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
-                                                        <a href="https://dollsvalley.com" class="project-box" target="_blank">
+                                                        <a href="https://dollsvalley.com" class="project-box" target="_BLANK">
                                                             
                                                         <div class="project-box-inner">
                                                             <h5>Dolls Valley Dolls</h5>
@@ -340,7 +339,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
-                                                    <a href="https://plug.ng" class="project-box" target="_blank" rel="noopener noreferrer">
+                                                    <a href="https://plug.ng" class="project-box" target="_BLANK" rel="noopener noreferrer">
                                                     <div class="project-box-inner">
                                                     <h5>Plug.Ng</h5>
                                                 <div class="project-category">2024 / UTILITIES</div>
@@ -348,7 +347,7 @@
                                         </a>
                                     </div>
                                     <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
-                                        <a href="https://reelfruit.com" class="project-box" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://reelfruit.com" class="project-box" target="_BLANK" rel="noopener noreferrer">
                                             <div class="project-box-inner">
                                                 <h5>Reel Fruit</h5>
                                                 <div class="project-category">2023 / SNACK RETAIL</div>
@@ -356,7 +355,7 @@
                                         </a>
                                     </div>
                                     <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
-                                        <a href="https://motivar.live" class="project-box" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://motivar.live" class="project-box" target="_BLANK" rel="noopener noreferrer">
                                             <div class="project-box-inner">
                                                 <h5>Motivar</h5>
                                                 <div class="project-category">2023 / ONLINE LEARNING</div>
@@ -364,7 +363,7 @@
                                         </a>
                                     </div>
                                     <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
-                                        <a href="https://powerplug.ng" class="project-box" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://powerplug.ng" class="project-box" target="_BLANK" rel="noopener noreferrer">
                                             <div class="project-box-inner">
                                                 <h5>Hespat Technologies</h5>
                                                 <div class="project-category">2021 / RIDE-HAILING</div>
@@ -477,7 +476,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="contact-info">
-                                        <form class="js-form" novalidate="novalidate">
+                                        <form class="js-form" novalidate="novalidate" method="post">
                                             <?php
                                                 if(isset($_POST['email'])) {
                                                 
@@ -559,7 +558,7 @@
                                                 'X-Mailer: PHP/' . phpversion();
                                                 @mail($email_to, $email_subject, $email_message, $headers); 
 
-                                                echo "<span id='success' class='text-primary'>Thank You! for reaching out, I will be in touch</span>"; 
+                                                echo "<span id='success' class='text-primary'></span>"; 
                                                 ?>
                                                 
                                                 <?php
@@ -580,11 +579,11 @@
                                                     <textarea name="message" required="" placeholder="Message*"></textarea>
                                                 </div>
                                                 <div class="form-group form-group-message col-sm-12">
-                                                    <span id="success" class="text-primary">Thank You, your message was successfully sent!</span>
+                                                    <span id="success" class="text-primary">Thank you for reaching out! I will be in touch</span>
                                                     <span id="error" class="text-primary">Sorry, something went wrong </span>
                                                 </div>
                                                 <div class="col-sm-12">
-                                                    <button type="submit" name="email" class="btn">Let's Chat</button>
+                                                    <button type="submit" name="email" class="btn">Let's Chat!</button>
                                                 </div>
                                             </div>
                                         </form>
