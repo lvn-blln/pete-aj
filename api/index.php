@@ -1,8 +1,3 @@
-<?php
-require '/includes/PHPMailer/class.phpmailer.php'; 
-
-?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 
