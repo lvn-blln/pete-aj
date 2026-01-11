@@ -1,5 +1,5 @@
 <?php
-require 'includes/PHPMailer/class.phpmailer.php'; 
+require '../includes/PHPMailer/class.phpmailer.php'; 
 
 ?>
 
