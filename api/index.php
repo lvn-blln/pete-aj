@@ -1,3 +1,8 @@
+<?php
+require 'includes/PHPMailer/class.phpmailer.php'; 
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -5,7 +10,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
     <meta name="author" content=":INSPO">
 
     <link rel="shortcut icon" href="/images/favicon.png">
@@ -24,15 +28,15 @@
     <meta property="og:title" content="1.5.5.9.0">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Inspired by the things I see and the things I think I saw.">
-    <meta property="og:image" content="https://pete-aj.vercel.app/images/BllN.png">
+    <meta property="og:image" content="https://pete-aj.vercel.app/images/BllN-mark.png">
 
-    <meta property="og:image:secure_url" content="https://pete-aj.vercel.app/images/BllN.png">
+    <meta property="og:image:secure_url" content="https://pete-aj.vercel.app/images/BllN-mark.png">
     <meta property="og:image:width" content="4000">
     <meta property="og:image:height" content="5000">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="1.5.5.9.0">
     <meta name="twitter:description" content="Inspired by the things I see and the things I think I saw.">
-    <meta name="twitter:image" content="https://pete-aj.vercel.app/images/BllN.png">
+    <meta name="twitter:image" content="https://pete-aj.vercel.app/images/BllN-mark.png">
 
 </head>
 
