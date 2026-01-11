@@ -10,7 +10,6 @@
    { "src": "/fonts/(.*)", "dest": "/fonts/$1" },
    { "src": "/js/(.*)", "dest": "/js/$1" },
    { "src": "/resume/(.*)", "dest": "/resume/$1" },
-   { "src": "/includes/(.*)", "dest": "/includes/$1" },
       { "src": "/(.*)", "dest": "/api/index.php" }
  ]
 }
