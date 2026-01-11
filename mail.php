@@ -105,3 +105,62 @@ try {
                                                 } catch (Exception $e) {
                                                     echo "Mailer Error: {$mail->ErrorInfo}";
                                                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Load environment variables (Vercel automatically provides them)
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $mail = new PHPMailer(true);
+
+    try {
+        // Server settings for your ESP (e.g., SendGrid, Mailtrap, Resend)
+        $mail->isSMTP();
+        $mail->Host = getenv('SMTP_HOST');
+        $mail->SMTPAuth = true;
+        $mail->Username = getenv('SMTP_USER');
+        $mail->Password = getenv('SMTP_PASS');
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or ENCRYPTION_SMTPS
+        $mail->Port = getenv('SMTP_PORT'); // e.g., 587 or 465
+
+        // Recipients
+        $mail->setFrom('blowaballoon@gmail.com', 'Mailer'); // Use a verified sender address
+        $mail->addAddress('blowaballoon@gmail.com', 'Recipient Name');
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Message: '. $subject;
+        $mail->Body    =
+            "Name: {$name}\n" .
+            "Email: {$email}\n\n" .
+            "Message:\n{$message}";
+
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
+                                           
