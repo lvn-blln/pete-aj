@@ -1,3 +1,8 @@
+<?php
+require '/includes/PHPMailer/class.phpmailer.php'; 
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -477,56 +482,44 @@
                                     <div class="contact-info">
                                         <form class="js-form" novalidate="novalidate" method="post">
                                             <?php
+require_once __DIR__ . '/vendor/autoload.php';
 
-                                                if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-                                                    http_response_code(403);
-                                                    exit("Forbidden");
-                                                }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-                                                $name    = trim($_POST["name"] ?? "");
-                                                $email   = trim($_POST["email"] ?? "");
-                                                $message = trim($_POST["message"] ?? "");
-                                                $subject = trim($_POST["subject"] ?? "");
+// Load environment variables (Vercel automatically provides them)
 
-                                                if ($name === "" || $email === "" || $message === "" ) {
-                                                    exit("All fields are required.");
-                                                }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $mail = new PHPMailer(true);
 
-                                                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                                                    exit("Invalid email address.");
-                                                }
+    try {
+        // Server settings for your ESP (e.g., SendGrid, Mailtrap, Resend)
+        $mail->isSMTP();
+        $mail->Host = getenv('SMTP_HOST');
+        $mail->SMTPAuth = true;
+        $mail->Username = getenv('SMTP_USER');
+        $mail->Password = getenv('SMTP_PASS');
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or ENCRYPTION_SMTPS
+        $mail->Port = getenv('SMTP_PORT'); // e.g., 587 or 465
 
-                                                $mail = new PHPMailer(true);
+        // Recipients
+        $mail->setFrom('blowaballoon@gmail.com', 'Mailer'); // Use a verified sender address
+        $mail->addAddress('blowaballoon@gmail.com', 'Recipient Name');
 
-                                                try {
-                                                    // Server settings
-                                                    $mail->isSMTP();
-                                                    $mail->Host       = 'smtp.gmail.com';
-                                                    $mail->SMTPAuth   = true;
-                                                    $mail->Username   = 'blowaballoon@gmail.com';      // your Gmail
-                                                    $mail->Password   = 'tcah pwmw vbgm alhc';        // app password
-                                                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                                                    $mail->Port       = 587;
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Message: '. $subject;
+        $mail->Body    =
+            "Name: {$name}\n" .
+            "Email: {$email}\n\n" .
+            "Message:\n{$message}";
 
-                                                    // Recipients
-                                                    $mail->setFrom('blowaballoon@gmail.com', 'Portfolio Contact');
-                                                    $mail->addAddress('blowaballoon@gmail.com');        // where messages go
-                                                    $mail->addReplyTo($email, $name);
-
-                                                    // Content
-                                                    $mail->isHTML(false);
-                                                    $mail->Subject = 'New Contact Form Message: '. $subject;
-                                                    $mail->Body    =
-                                                        "Name: {$name}\n" .
-                                                        "Email: {$email}\n\n" .
-                                                        "Message:\n{$message}";
-
-                                                    $mail->send();
-                                                    echo "Message sent successfully.";
-
-                                                } catch (Exception $e) {
-                                                    echo "Mailer Error: {$mail->ErrorInfo}";
-                                                }
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
                                             ?>
                                             <div class="row">
                                                 <div class="form-group col-sm-6">
