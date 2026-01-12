@@ -1,3 +1,10 @@
+<?php
+  require_once __DIR__ . '/vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -476,7 +483,45 @@
                                 <div class="col-md-6">
                                     <div class="contact-info">
                                         <form class="js-form" novalidate="novalidate" method="post">
+                                           <?php
+                                        
+
+// Load environment variables (Vercel automatically provides them)
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $mail = new PHPMailer(true);
+
+    try {
+        // Server settings for your ESP (e.g., SendGrid, Mailtrap, Resend)
+        $mail->isSMTP();
+        $mail->Host = getenv('SMTP_HOST');
+        $mail->SMTPAuth = true;
+        $mail->Username = getenv('SMTP_USER');
+        $mail->Password = getenv('SMTP_PASS');
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or ENCRYPTION_SMTPS
+        $mail->Port = getenv('SMTP_PORT'); // e.g., 587 or 465
+
+        // Recipients
+        $mail->setFrom('blowaballoon@gmail.com', 'Mailer'); // Use a verified sender address
+        $mail->addAddress('blowaballoon@gmail.com', 'Recipient Name');
+        $mail->addReplyTo($email, $name);
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Message: '. $subject;
+        $mail->Body    =
+            "Name: {$name}\n" .
+            "Email: {$email}\n\n" .
+            "Message:\n{$message}";
+
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
                                            
+                                           ?>
                                             <div class="row">
                                                 <div class="form-group col-sm-6">
                                                     <input type="text" name="name" required="" placeholder="Your Name*" aria-required="true">
