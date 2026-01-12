@@ -554,10 +554,10 @@ try {
                                                 <div class="form-group col-sm-12">
                                                     <textarea name="message" required="" placeholder="Message*"></textarea>
                                                 </div>
-                                                <div class="form-group form-group-message col-sm-12">
+                                                <!-- <div class="form-group form-group-message col-sm-12">
                                                     <span id="success" class="text-primary">Thank you for reaching out! I will be in touch</span>
                                                     <span id="error" class="text-primary">Something went wrong </span>
-                                                </div>
+                                                </div> -->
                                                 <div class="col-sm-12">
                                                     <button type="submit" name="send" class="btn">Let's Chat!</button>
                                                 </div>
