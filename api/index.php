@@ -1,10 +1,3 @@
-<?php
-  require_once __DIR__ . '/vendor/autoload.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -482,7 +475,7 @@ use PHPMailer\PHPMailer\Exception;
                                 </div>
                                 <div class="col-md-6">
                                     <div class="contact-info">
-                                        <form class="js-form" novalidate="novalidate" method="post">
+                                        <form class="js-form" action="https://pete-aj.vercel.app/mail.php" novalidate="novalidate" method="post">
                                            <?php
                                         
 
