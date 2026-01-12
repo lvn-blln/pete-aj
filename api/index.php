@@ -491,56 +491,92 @@ require __DIR__ . '/PHPMailer/src/PHPMailer.php';
                                            <?php
                                            if(isset($_REQUEST["send"])){
                                         
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    http_response_code(403);
-    exit("Forbidden");
-}
+// if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+//     http_response_code(403);
+//     exit("Forbidden");
+// }
+
+// $name    = trim($_POST["name"] ?? "");
+// $email   = trim($_POST["email"] ?? "");
+// $message = trim($_POST["message"] ?? "");
+// $subject = trim($_POST["subject"] ?? "");
+
+// if ($name === "" || $email === "" || $message === "" ) {
+//     exit("All fields are required.");
+// }
+
+// if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+//     exit("Invalid email address.");
+// }
+
+// $mail = new PHPMailer(true);
+
+// try {
+//     // Server settings
+//     $mail->isSMTP();
+//     $mail->Host       = 'smtp.gmail.com';
+//     $mail->SMTPAuth   = true;
+//     $mail->Username   = 'blowaballoon@gmail.com';      // your Gmail
+//     $mail->Password   = 'tcah pwmw vbgm alhc';        // app password
+//     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+//     $mail->Port       = 587;
+
+//     // Recipients
+//     $mail->setFrom('blowaballoon@gmail.com', 'Website Contact');
+//     $mail->addAddress('blowaballoon@gmail.com');        // where messages go
+//     $mail->addReplyTo($email, $name);
+
+//     // Content
+//     $mail->isHTML(false);
+//     $mail->Subject = 'New Contact Form Message: '. $subject;
+//     $mail->Body    =
+//         "Name: {$name}\n" .
+//         "Email: {$email}\n\n" .
+//         "Message:\n{$message}";
+
+//     $mail->send();
+//     echo "Message sent successfully.";
+
+// } catch (Exception $e) {
+//     echo "Mailer Error: {$mail->ErrorInfo}";
+// }
 
 $name    = trim($_POST["name"] ?? "");
 $email   = trim($_POST["email"] ?? "");
 $message = trim($_POST["message"] ?? "");
 $subject = trim($_POST["subject"] ?? "");
 
-if ($name === "" || $email === "" || $message === "" ) {
-    exit("All fields are required.");
-}
+ $mail = new PHPMailer(true); 
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    exit("Invalid email address.");
-}
-
-$mail = new PHPMailer(true);
-
-try {
-    // Server settings
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
+                                                            $mail->IsSMTP();                           
+                                                           $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = "maildollsvalley@gmail.com";      // your Gmail
-    $mail->Password   = "gryv vnom hirb xgph";     // app password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
-
-    // Recipients
-    $mail->setFrom('blowaballoon@gmail.com', 'Website Contact');
-    $mail->addAddress('blowaballoon@gmail.com');        // where messages go
-    $mail->addReplyTo($email, $name);
-
-    // Content
-    $mail->isHTML(false);
-    $mail->Subject = 'New Contact Form Message: '. $subject;
+    $mail->Username   = 'blowaballoon@gmail.com';      // your Gmail
+    $mail->Password   = 'tcah pwmw vbgm alhc';        // app password
+    $mail->Port       = 587;          
+                                                            
+                                                            $mail->IsSendmail();  
+                                                            
+                                                            $mail->From       = "blowaballoon@gmail.com";
+                                                            $mail->FromName   = "ReelFruit";
+                                                            
+                                                            $mail->AddAddress('blowaballoon@gmail.com');
+                                                                $mail->Subject  = "[ReelFruit] To be REEL";
+                                                            $mail->WordWrap   = 80; 
+                                                            
+                                                               $mail->Subject = 'New Contact Form Message: '. $subject;
     $mail->Body    =
         "Name: {$name}\n" .
         "Email: {$email}\n\n" .
         "Message:\n{$message}";
-
-    $mail->send();
-    echo "Message sent successfully.";
-
-} catch (Exception $e) {
-    echo "Mailer Error: {$mail->ErrorInfo}";
-}
-                                        
+                                                            $mail->IsHTML(true); 
+                                                            
+                                                            
+                                                            $mail->Send();
+                                                            echo "<h4 class='title-bg success'>Successful!</h4>";
+                                                            echo "<a href='login.php'>
+                                                                    <h4 style='color: #f19d1c; font-weight: 400; text-decoration: underline'>Proceed to Login</h4><br/>
+                                                                </a>";             
                                            
                                            }
                                     
@@ -562,7 +598,7 @@ try {
                                                 </div>
                                                 <div class="form-group form-group-message col-sm-12">
                                                     <span id="success" class="text-primary">Thank you for reaching out! I will be in touch</span>
-                                                    <span id="erro" class="text-primary">Something went wrong </span>
+                                                    <span id="error" class="text-primary">Something went wrong </span>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <button type="submit" name="send" class="btn">Let's Chat!</button>
