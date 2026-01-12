@@ -516,8 +516,8 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'blowaballoon@gmail.com';      // your Gmail
-    $mail->Password   = 'tcah pwmw vbgm alhc';        // app password
+    $mail->Username   = "maildollsvalley@gmail.com";      // your Gmail
+    $mail->Password   = "gryv vnom hirb xgph";     // app password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
@@ -562,7 +562,7 @@ try {
                                                 </div>
                                                 <div class="form-group form-group-message col-sm-12">
                                                     <span id="success" class="text-primary">Thank you for reaching out! I will be in touch</span>
-                                                    <span id="error" class="text-primary">Something went wrong </span>
+                                                    <span id="erro" class="text-primary">Something went wrong </span>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <button type="submit" name="send" class="btn">Let's Chat!</button>
