@@ -23,7 +23,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $mail = new PHPMailer(true);
 
-try {
+
    
 
      $register="<style>
@@ -161,9 +161,7 @@ try {
                                                             $mail->Send();
                                                             echo "<h4 class='title-bg success'>Successful!</h4>";
 
-} catch (Exception $e) {
-    echo "Mailer Error: {$mail->ErrorInfo}";
-}
+
 
 
 
