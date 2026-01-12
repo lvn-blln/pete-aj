@@ -1,5 +1,6 @@
 <?php
-require '/api/PHPMailer/class.phpmailer.php'; 
+require(__DIR__ . '/includes/PHPMailer/class.phpmailer.php');
+
 
 ?>
 
