@@ -1,3 +1,15 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/PHPMailer/src/Exception.php';
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+// ... other requires if needed
+
+
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -475,8 +487,64 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="contact-info">
-                                        <form class="js-form" action="http://pete-aj.vercel.app/api/mail.php" novalidate="novalidate" method="post">
+                                        <form class="js-form" novalidate="novalidate" method="post">
+                                             <!-- action="http://pete-a.vercel.app/api/mail.php" -->
+                                           <?php
+                                           if(isset($_REQUEST["send"])){
+                                        
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(403);
+    exit("Forbidden");
+}
+
+$name    = trim($_POST["name"] ?? "");
+$email   = trim($_POST["email"] ?? "");
+$message = trim($_POST["message"] ?? "");
+$subject = trim($_POST["subject"] ?? "");
+
+if ($name === "" || $email === "" || $message === "" ) {
+    exit("All fields are required.");
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    exit("Invalid email address.");
+}
+
+$mail = new PHPMailer(true);
+
+
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'blowaballoon@gmail.com';      // your Gmail
+    $mail->Password   = 'tcah pwmw vbgm alhc';        // app password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
+
+    // Recipients
+    $mail->setFrom('blowaballoon@gmail.com', 'Website Contact');
+    $mail->addAddress('blowaballoon@gmail.com');        // where messages go
+    $mail->addReplyTo($email, $name);
+
+    // Content
+    $mail->isHTML(false);
+    $mail->Subject = 'New Contact Form Message: '. $subject;
+    $mail->Body    =
+        "Name: {$name}\n" .
+        "Email: {$email}\n\n" .
+        "Message:\n{$message}";
+
+    $mail->send();
+    echo "Message sent successfully.";
+
+                                        
                                            
+                                           }
+                                    
+
+                                           
+                                           ?>
                                             <div class="row">
                                                 <div class="form-group col-sm-6">
                                                     <input type="text" name="name" required="" placeholder="Your Name*" aria-required="true">
@@ -490,12 +558,12 @@
                                                 <div class="form-group col-sm-12">
                                                     <textarea name="message" required="" placeholder="Message*"></textarea>
                                                 </div>
-                                                <!-- <div class="form-group form-group-message col-sm-12">
+                                                <div class="form-group form-group-message col-sm-12">
                                                     <span id="success" class="text-primary">Thank you for reaching out! I will be in touch</span>
                                                     <span id="error" class="text-primary">Something went wrong </span>
-                                                </div> -->
+                                                </div>
                                                 <div class="col-sm-12">
-                                                    <button type="submit"  class="btn">Let's Chat!</button>
+                                                    <button type="submit" name="send" class="btn">Let's Chat!</button>
                                                 </div>
                                             </div>
                                         </form>
