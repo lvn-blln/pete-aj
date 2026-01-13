@@ -140,12 +140,13 @@
                 <style>
                     .bg-res{
                         background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);
-                        background-size: cover; 
+                        background-size: contain; 
                     }
                     @media (max-width: 768px){
                         .bg-res {
                             background-repeat: no-repeat;
                             background-position: center; 
+                            background-size: cover; 
                             height: 100vh; 
                             width: 100vw;
                         }
