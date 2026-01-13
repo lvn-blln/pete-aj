@@ -153,7 +153,7 @@
                         }
                     }
                 </style>
-                <div class="section-bg bg-res"></div>
+                <div class="section-bg bg-re" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
                             <div class="boxed boxed-inner">
@@ -502,10 +502,10 @@
                                                 <div class="form-group col-sm-12">
                                                     <textarea name="message" required="" placeholder="Message*"></textarea>
                                                 </div>
-                                                <!-- <div class="form-group form-group-message col-sm-12">
+                                                <div class="form-group form-group-message col-sm-12">
                                                     <span id="success" class="text-primary">Thank you for reaching out! I will be in touch</span>
                                                     <span id="error" class="text-primary">Something went wrong </span>
-                                                </div> -->
+                                                </div>
                                                 <div class="col-sm-12">
                                                     <button type="submit" class="btn">Let's Chat!</button>
                                                 </div>
