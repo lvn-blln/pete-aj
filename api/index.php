@@ -539,17 +539,17 @@ require __DIR__ . '/PHPMailer/src/PHPMailer.php';
     document.getElementById("contactForm").addEventListener("submit", async e => {
     e.preventDefault();
 
-    const form = e.target;
-    const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
+    const f = e.target;
+    const payload = {
+        name: f.name.value,
+        email: f.email.value,
+        message: f.message.value
     };
 
-    const res = await fetch("/api/contact", {
+    const res = await fetch("/api/mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+        body: JSON.stringify(payload)
     });
 
     const result = await res.json();
