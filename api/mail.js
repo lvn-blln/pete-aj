@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
         `Message:\n${message}`
     });
 
-    return res.status(200).json({ message: "Message sent successfully" });
+    // return res.status(200).json({ message: "Message sent successfully" });
 
   } catch (err) {
     console.error("GMAIL ERROR:", err);
