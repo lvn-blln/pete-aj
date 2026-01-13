@@ -140,11 +140,12 @@
                 <style>
                     .bg-res{
                         background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);
-                        background-size: contain; 
+                        background-size: contain;
+                        
+                            background-repeat: no-repeat;
                     }
                     @media (max-width: 768px){
                         .bg-res {
-                            background-repeat: no-repeat;
                             background-position: center; 
                             background-size: cover; 
                             height: 100vh; 
@@ -524,6 +525,10 @@
 </div>
 </div>
 <script>
+    
+    const outputElement = document.getElementById("success");
+    
+
     document.getElementById("contactForm").addEventListener("submit", async e => {
     e.preventDefault();
 
@@ -541,7 +546,8 @@
     });
 
     const result = await res.json();
-    alert(result.message);
+    // alert(result.message);
+    outputElement.innerHTML = "Thank you for reaching out! I will be in touch";
     });
 </script>
 

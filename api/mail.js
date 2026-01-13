@@ -31,9 +31,7 @@ module.exports = async (req, res) => {
         `Message:\n${message}`
     });
 
-    // return res.status(200).json({ message: "Message sent successfully" });
-    const outputElement = document.getElementById("success");
-    outputElement.innerHTML = "Thank you for reaching out! I will be in touch";
+    return res.status(200).json({ message: "Message sent successfully" });
 
   } catch (err) {
     console.error("GMAIL ERROR:", err);
