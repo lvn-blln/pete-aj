@@ -1,6 +1,6 @@
-import nodemailer from "nodemailer";
+const nodemailer = require("nodemailer");
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
   }
@@ -25,12 +25,16 @@ export default async function handler(req, res) {
       to: process.env.GMAIL_USER,
       replyTo: email,
       subject: "New Contact Form Message",
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      text:
+        `Name: ${name}\n` +
+        `Email: ${email}\n\n` +
+        `Message:\n${message}`
     });
 
     return res.status(200).json({ message: "Message sent successfully" });
 
-  } catch (error) {
+  } catch (err) {
+    console.error("GMAIL ERROR:", err);
     return res.status(500).json({ message: "Email failed to send" });
   }
-}
+};
