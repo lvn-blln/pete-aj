@@ -149,7 +149,22 @@ require __DIR__ . '/PHPMailer/src/PHPMailer.php';
     <div class="pagepiling">
         <div data-anchor="page1" class="pp-scrollable text-white section section-1">
             <div class="scroll-wrap">
-                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
+                <style>
+                    .bg-res{
+                        background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);
+                       
+                    }
+                    @media (max-width: 768px){
+                        .bg-res {
+                            background-repeat: no-repeat;
+                            background-position: center; 
+                            background-size: cover; 
+                            height: 100vh; 
+                            width: 100vw;
+                        }
+                    }
+                </style>
+                <div class="section-bg bg-res"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
                             <div class="boxed boxed-inner">
@@ -322,11 +337,11 @@ require __DIR__ . '/PHPMailer/src/PHPMailer.php';
                     <div data-anchor="page4" class="pp-scrollable text-white section section-5">
                         <div class="scroll-wrap">
                             <div class="bg-changer">
-                                <div class="section-bg" style="background-image:url(/images/bg/project1.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/plug.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/reelfruit.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/motivar.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
-                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/powerplug.png); background-repeat: no-repeat; background-position: center; background-size: cover; heigh: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background-image:url(/images/bg/project1.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; height: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/plug.png); background-repeat: no-repeat; background-position: center; background-size: cover; height: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/reelfruit.png); background-repeat: no-repeat; background-position: center; background-size: cover; height: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/motivar.png); background-repeat: no-repeat; background-position: center; background-size: cover; height: 100vh; width: 100vw"></div>
+                                <div class="section-bg" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/powerplug.png); background-repeat: no-repeat; background-position: center; background-size: cover; height: 100vh; width: 100vw"></div>
                         </div>
 
                         <div class="scrollable-content">
@@ -487,76 +502,13 @@ require __DIR__ . '/PHPMailer/src/PHPMailer.php';
                                 </div>
                                 <div class="col-md-6">
                                     <div class="contact-info">
-                                        <form class="js-form" novalidate="novalidate" method="post">
-                                             <!-- action="http://pete-a.vercel.app/api/mail.php" -->
-                                           <?php
-                                           if(isset($_REQUEST["send"])){
-                                        
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    http_response_code(403);
-    exit("Forbidden");
-}
-
-$name    = trim($_POST["name"] ?? "");
-$email   = trim($_POST["email"] ?? "");
-$message = trim($_POST["message"] ?? "");
-$subject = trim($_POST["subject"] ?? "");
-
-if ($name === "" || $email === "" || $message === "" ) {
-    exit("All fields are required.");
-}
-
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    exit("Invalid email address.");
-}
-
-$mail = new PHPMailer(true);
-
-try {
-    // Server settings
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'blowaballoon@gmail.com';      // your Gmail
-    $mail->Password   = 'tcah pwmw vbgm alhc';        // app password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
-
-    // Recipients
-    $mail->setFrom('blowaballoon@gmail.com', 'Website Contact');
-    $mail->addAddress('blowaballoon@gmail.com');        // where messages go
-    $mail->addReplyTo($email, $name);
-
-    // Content
-    $mail->isHTML(false);
-    $mail->Subject = 'New Contact Form Message: '. $subject;
-    $mail->Body    =
-        "Name: {$name}\n" .
-        "Email: {$email}\n\n" .
-        "Message:\n{$message}";
-
-    $mail->send();
-    echo "Message sent successfully.";
-
-} catch (Exception $e) {
-    echo "Mailer Error: {$mail->ErrorInfo}";
-}
-                                        
-                                           
-                                           }
-                                    
-
-                                           
-                                           ?>
-                                            <div class="row">
+                                        <form id="contactForm" class="js-form" novalidate="novalidate">
+                                           <div class="row">
                                                 <div class="form-group col-sm-6">
                                                     <input type="text" name="name" required="" placeholder="Your Name*" aria-required="true">
                                                 </div>
                                                 <div class="form-group col-sm-6">
                                                     <input type="email" required="" name="email" placeholder="Your Email*">
-                                                </div>
-                                                <div class="form-group col-sm-12">
-                                                    <input type="text" name="subject" placeholder="Subject (Optional)">
                                                 </div>
                                                 <div class="form-group col-sm-12">
                                                     <textarea name="message" required="" placeholder="Message*"></textarea>
@@ -566,7 +518,7 @@ try {
                                                     <span id="error" class="text-primary">Something went wrong </span>
                                                 </div> -->
                                                 <div class="col-sm-12">
-                                                    <button type="submit" name="send" class="btn">Let's Chat!</button>
+                                                    <button type="submit" class="btn">Let's Chat!</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -583,6 +535,27 @@ try {
 </div>
 </div>
 </div>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", async e => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+    };
+
+    const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    alert(result.message);
+    });
+</script>
 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
 <script src="js/wow.min.js"></script>
