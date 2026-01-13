@@ -140,20 +140,17 @@
                 <style>
                     .bg-res{
                         background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);
-                        background-size: contain;
-                        
-                            background-repeat: no-repeat;
+                        background-size: cover; 
                     }
                     @media (max-width: 768px){
                         .bg-res {
-                            background-position: center; 
-                            background-size: cover; 
+                            background-position: center;
                             height: 100vh; 
                             width: 100vw;
                         }
                     }
                 </style>
-                <div class="section-bg bg-re" style="background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(0, 0, 0, 0.5)),url(/images/bg/bg.jpg);"></div>
+                <div class="section-bg bg-res"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
                             <div class="boxed boxed-inner">
