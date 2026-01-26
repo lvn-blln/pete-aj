@@ -33,6 +33,12 @@
     <meta name="twitter:description" content="Inspired by the things I see and the things I think I saw.">
     <meta name="twitter:image" content="https://pete-aj.vercel.app/images/BllN-mark.png">
 
+    <!-- Vercel Web Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
 </head>
 
 <body>
